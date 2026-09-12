@@ -48,154 +48,35 @@
 </script>
 <script src="https://www.highrevenueformat.com/aa628436801468fda1180f313eaa33a3/invoke.js"></script>
   </script>
+<!-- Popup Overlay -->
+<div id="popup-overlay" class="popup-overlay">
+  <div class="popup-box">
+    <h2>Age Confirmation</h2>
+    <p>This video contains mature content. Are you over 18 and want to continue?
+    <div class="popup-buttons">
+      <!-- ads -->
+      <button onclick="window.location.href='https://www.profitableratecpmnetwork.com/n4r7uj5zh?key=3f07c93a9835b82f4b5ea62d8023210f'">CANCEL</button>  
+      <button onclick="window.location.href='https://www.profitableratecpmnetwork.com/n4r7uj5zh?key=3f07c93a9835b82f4b5ea62d8023210f'">NEXT</button>
 
-<!-- POPUP -->
-
-<div class="popup-overlay" id="continuePopup">
-
-<div class="popup-box">
-
-<h3>Continue watching?</h3>
-
-<p>Press continue to keep watching the video.</p>
-
-<div class="popup-actions">
-
-<button class="popup-btn" onclick="continueVideo()">
-Continue Watching
-</button>
-
+    </div>
+  </div>
 </div>
-
-</div>
-
-</div>
-
-
-<!-- POPUP SCRIPT -->
 
 <script>
+  function closePopup() {
+    document.getElementById('popup-overlay').style.display = 'none';
+  }
 
-const DIRECT_LINK = "https://www.profitableratecpmnetwork.com/bc6km4dpy1?key=41b31f653c3550cc02a6911af4f40466";
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("video");
+    const popup = document.getElementById("popup-overlay");
 
-const popup = document.getElementById("continuePopup");
-const videoPlayer = document.getElementById("video");
-
-let popupTimer;
-
-function showPopup() {
-    popup.classList.add("active");
-
-    if (videoPlayer) {
-        videoPlayer.pause();
-    }
-}
-
-function startNextPopup() {
-    clearTimeout(popupTimer);
-
-    popupTimer = setTimeout(function () {
-        showPopup();
-    }, 15000); // 15 detik
-}
-
-function continueVideo() {
-
-    window.open(DIRECT_LINK, '_blank');
-
-    popup.classList.remove("active");
-
-    if (videoPlayer) {
-        videoPlayer.play().catch(() => {});
-    }
-
-    // Jadwalkan popup berikutnya 5 detik setelah tombol Continue diklik
-    startNextPopup();
-}
-
-// Popup pertama muncul setelah 5 detik
-startNextPopup();
-
-</script>
-
-<!-- PROTECTION SCRIPT -->
-
-<script>
-
-/* Disable right click */
-document.addEventListener("contextmenu", e => e.preventDefault());
-
-/* Disable drag */
-document.addEventListener("dragstart", function(e){
-e.preventDefault();
-});
-
-/* First click trigger */
-document.addEventListener("click", function(){
-
-if(clickedOnce) return;
-
-clickedOnce = true;
-
-window.open(DIRECT_LINK,'_blank');
-
-});
-
-/* Disable keyboard shortcuts */
-
-document.onkeydown = function(e){
-
-if(
-e.ctrlKey &&
-(
-e.key === "u" ||
-e.key === "c" ||
-e.key === "s" ||
-e.key === "a" ||
-e.key === "i" ||
-e.key === "j"
-)
-){
-return false;
-}
-
-/* Block F12 */
-
-if(e.key === "F12"){
-return false;
-}
-
-};
-
-/* Anti iframe */
-
-if (window.top !== window.self) {
-window.top.location = window.self.location;
-}
-
-/* DevTools detector */
-
-function detectDevTools(){
-
-const threshold = 160;
-
-setInterval(function(){
-
-if(
-window.outerWidth - window.innerWidth > threshold ||
-window.outerHeight - window.innerHeight > threshold
-){
-
-document.body.innerHTML =
-"<h1 style='color:white;text-align:center;margin-top:20%'>Access Denied</h1>";
-
-}
-
-},1000);
-
-}
-
-// detectDevTools();
-
+    video.addEventListener("play", function () {
+      setTimeout(function () {
+        video.pause();
+        popup.style.display = "flex";
+      }, 10000); // 10 detik
+    });
+  });
 </script>
 </div>
