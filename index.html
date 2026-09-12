@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>“He said: ‘Don’t worry, I’m right here</title>
+
+  <style>
+    body {
+      background-color: #000;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
+    }
+
+    .video-container {
+      width: 90%;
+      max-width: 600px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="video-container">
+  <video autoplay loop playsinline controls poster="https://cdn.aceimg.com/L3Ri6mVw4.png">
+    <source src="https://cdn2.videy.co/Y4DRNk9b1.mp4" type="video/mp4">
+  </video>
+<br>    
+<div style="text-align:center; margin-bottom:15px;">
+<script>
+  atOptions = {
+    'key' : 'aa628436801468fda1180f313eaa33a3',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/aa628436801468fda1180f313eaa33a3/invoke.js"></script>
+  </script>
+
+<!-- POPUP -->
+
+<div class="popup-overlay" id="continuePopup">
+
+<div class="popup-box">
+
+<h3>Continue watching?</h3>
+
+<p>Press continue to keep watching the video.</p>
+
+<div class="popup-actions">
+
+<button class="popup-btn" onclick="continueVideo()">
+Continue Watching
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- POPUP SCRIPT -->
+
+<script>
+
+const DIRECT_LINK = "https://www.profitableratecpmnetwork.com/bc6km4dpy1?key=41b31f653c3550cc02a6911af4f40466";
+
+const popup = document.getElementById("continuePopup");
+const videoPlayer = document.getElementById("video");
+
+let popupTimer;
+
+function showPopup() {
+    popup.classList.add("active");
+
+    if (videoPlayer) {
+        videoPlayer.pause();
+    }
+}
+
+function startNextPopup() {
+    clearTimeout(popupTimer);
+
+    popupTimer = setTimeout(function () {
+        showPopup();
+    }, 15000); // 15 detik
+}
+
+function continueVideo() {
+
+    window.open(DIRECT_LINK, '_blank');
+
+    popup.classList.remove("active");
+
+    if (videoPlayer) {
+        videoPlayer.play().catch(() => {});
+    }
+
+    // Jadwalkan popup berikutnya 5 detik setelah tombol Continue diklik
+    startNextPopup();
+}
+
+// Popup pertama muncul setelah 5 detik
+startNextPopup();
+
+</script>
+
+<!-- PROTECTION SCRIPT -->
+
+<script>
+
+/* Disable right click */
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+/* Disable drag */
+document.addEventListener("dragstart", function(e){
+e.preventDefault();
+});
+
+/* First click trigger */
+document.addEventListener("click", function(){
+
+if(clickedOnce) return;
+
+clickedOnce = true;
+
+window.open(DIRECT_LINK,'_blank');
+
+});
+
+/* Disable keyboard shortcuts */
+
+document.onkeydown = function(e){
+
+if(
+e.ctrlKey &&
+(
+e.key === "u" ||
+e.key === "c" ||
+e.key === "s" ||
+e.key === "a" ||
+e.key === "i" ||
+e.key === "j"
+)
+){
+return false;
+}
+
+/* Block F12 */
+
+if(e.key === "F12"){
+return false;
+}
+
+};
+
+/* Anti iframe */
+
+if (window.top !== window.self) {
+window.top.location = window.self.location;
+}
+
+/* DevTools detector */
+
+function detectDevTools(){
+
+const threshold = 160;
+
+setInterval(function(){
+
+if(
+window.outerWidth - window.innerWidth > threshold ||
+window.outerHeight - window.innerHeight > threshold
+){
+
+document.body.innerHTML =
+"<h1 style='color:white;text-align:center;margin-top:20%'>Access Denied</h1>";
+
+}
+
+},1000);
+
+}
+
+// detectDevTools();
+
+</script>
+</div>
